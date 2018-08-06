@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+     
+     
+<struts>
+    <package name="liu" extends="struts-default">
+        <global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="msg">/common/msg.jsp</result>
+        </global-results>
+        
+        
+        <action name="upload" class="com.dsf.bysj.util.upload" method="upload">
+             <result name="success">/upload/upload_re.jsp</result>
+        </action>
+         
+        <action name="index" class="indexAction" method="index">
+            <result name="success">/site/index.jsp</result>
+        </action>
+        
+        
+        
+        
+        
+        <action name="gonggaoAdd" class="gonggaoAction" method="gonggaoAdd">
+        </action>
+        <action name="gonggaoDel" class="gonggaoAction" method="gonggaoDel">
+        </action>
+        <action name="gonggaoMana" class="gonggaoAction" method="gonggaoMana">
+            <result>/admin/gonggao/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoDetail" class="gonggaoAction" method="gonggaoDetail">
+            <result>/admin/gonggao/gonggaoDetail.jsp</result>
+        </action>
+        <action name="gonggaoDetailQian" class="gonggaoAction" method="gonggaoDetailQian">
+            <result>/site/gonggao/gonggaoDetailQian.jsp</result>
+        </action>
+        <action name="gonggaoAll" class="gonggaoAction" method="gonggaoAll">
+            <result>/site/gonggao/gonggaoAll.jsp</result>
+        </action>
+        <action name="findByGgID" class="gonggaoAction" method="findByGgID">
+          <result name="success">/admin/gonggao/updateGG.jsp</result>
+        </action>
+        <action name="updateGG" class="gonggaoAction" method="updateGG">
+        </action>
+        
+        
+        
+
+        <action name="userAdd" class="userAction" method="userAdd">
+        </action>
+        <action name="userMana" class="userAction" method="userMana">
+             <result name="success">/admin/user/userMana.jsp</result>
+        </action>
+        <action name="userDel" class="userAction" method="userDel">
+        </action>
+        <action name="updateUser" class="userAction" method="updateUser">
+        </action>
+        <action name="findById" class="userAction" method="findById">
+        	<result name="success">/admin/user/userUpdate.jsp</result>
+        </action>
+        <action name="userDetail" class="userAction" method="userDetail">
+             <result name="success">/admin/user/userDetail.jsp</result>
+        </action>
+        <action name="userSelect" class="userAction" method="userSelect">
+             <result name="success">/admin/user/userSelect.jsp</result>
+        </action>
+        
+        
+        
+        <action name="cheAdd" class="cheAction" method="cheAdd">
+        </action>
+        <action name="cheMana" class="cheAction" method="cheMana">
+             <result name="success">/admin/che/cheMana.jsp</result>
+        </action>
+        <action name="cheDel" class="cheAction" method="cheDel">
+        </action>
+        <action name="cheAll" class="cheAction" method="cheAll">
+             <result name="success">/admin/che/cheAll.jsp</result>
+        </action>
+        <action name="cheSuoyou" class="cheAction" method="cheSuoyou">
+             <result name="success">/site/che/cheSuoyou.jsp</result>
+        </action>
+        <action name="cheDetailQian" class="cheAction" method="cheDetailQian">
+             <result name="success">/site/che/cheDetailQian.jsp</result>
+        </action>
+        <action name="cheRes" class="cheAction" method="cheRes">
+             <result name="success">/site/che/cheSuoyou.jsp</result>
+        </action>
+        
+        
+        
+        <action name="zulinAdd" class="zulinAction" method="zulinAdd">
+        </action>
+        <action name="zulinMana" class="zulinAction" method="zulinMana">
+             <result name="success">/admin/zulin/zulinMana.jsp</result>
+        </action>
+        <action name="zulinDel" class="zulinAction" method="zulinDel">
+        </action>
+        <action name="huanche" class="zulinAction" method="huanche">
+        </action>
+        <action name="zulin_tongji" class="zulinAction" method="zulin_tongji">
+             <result name="success">/admin/tongji/zulin_tongji.jsp</result>
+        </action>
+        
+        
+        
+        <action name="yuyueAdd" class="yuyueAction" method="yuyueAdd">
+        </action>
+        <action name="yuyueDel" class="yuyueAction" method="yuyueDel">
+        </action>
+        <action name="yuyueMana" class="yuyueAction" method="yuyueMana">
+             <result>/admin/yuyue/yuyueMana.jsp</result>
+        </action>
+        
+        
+        
+        <action name="jieshaoMana" class="jieshaoAction" method="jieshaoMana">
+            <result name="success">/admin/jieshao/jieshaoMana.jsp</result>
+        </action>
+        <action name="jieshaoEdit" class="jieshaoAction" method="jieshaoEdit">
+        </action>
+        
+        
+        <action name="jieshaoShow" class="jieshaoAction" method="jieshaoShow">
+            <result name="success">/site/jieshao/jieshaoShow.jsp</result>
+        </action>
+    </package>
+    
+    
+       <package name="liu1" extends="json-default">
+	       <action name="userReg" class="userAction" method="userReg">
+	       
+	       <result type="json">  
+                <param name="true">true</param>  
+                <param name="faile">faile</param>
+            </result> 
+	       
+	        </action>
+    	</package>
+</struts>
